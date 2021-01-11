@@ -1,6 +1,4 @@
 # PasswordGenerator
-# MyPortfolioPage
-
 <strong> Project Summary: </strong> <br>
 
 <div align="left">
