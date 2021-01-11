@@ -33,7 +33,6 @@ function getPasswordLength() {
 
 // Show Prompts for including Upper-case, Lower-case, Special characters and Numbers
 function showPrompt() {
-    acceptableCharacters = "";
     acceptableTypes.length = 0;
 
     options.upper = confirm("Do you want to include Upper-case ?");
@@ -79,7 +78,6 @@ function generatePassword() {
     for (var i=0; i< passwordLength; i++) {
         var randomNo = Math.floor(Math.random() * acceptableTypes.length);  
         randomPassword += getRandomCharacterFrom(acceptableTypes[randomNo]);
-        getRandomCharacterFrom["UpperCase"];
     }
     return randomPassword;
 }
