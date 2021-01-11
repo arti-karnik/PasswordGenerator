@@ -19,19 +19,19 @@ var acceptableCharacters = "";
 // Add event listener to generate button
 generateBtn.addEventListener("click", () => {
     showPrompt();
-    passwordLength = getPasswordLength();
+    getPasswordLength();
+    console.log(passwordLength);
     writePassword()
 });
 
 // Show Prompts to get Password length
 function getPasswordLength() {
-    var length = prompt("Please Enter length of Password"); 
+    passwordLength = prompt("Please Enter length of Password"); 
 
-    if (parseInt(length) < minCount || parseInt(length) > maxCount) {
+    if (parseInt(passwordLength) < minCount || parseInt(passwordLength) > maxCount) {
         alert("Password length should be between " + minCount + " and " + maxCount);
         getPasswordLength();
     } 
-    return length;
 }
 
 // Show Prompts for including Upper-case, Lower-case, Special characters and Numbers
@@ -45,17 +45,14 @@ function showPrompt() {
     if (options.upper) {
         acceptableCharacters += upperLetters;
     } 
-
     if (options.lower) {
         acceptableCharacters += lowerLetters;
     } 
-
     if (options.special) {
         acceptableCharacters += special;
     }
     if (options.numbers) {
         acceptableCharacters += numbers;
-
     } 
     console.log(acceptableCharacters);
 
@@ -73,12 +70,9 @@ function getRandomCharacterFrom(string) {
 // Generate password based on user chosen options
 function generatePassword() {
     var randomPassword = "";
-
     for (var i=0; i< passwordLength; i++) {
         randomPassword +=  getRandomCharacterFrom(acceptableCharacters);
     }
-    console.log(randomPassword);
-
     return randomPassword;
 }
 // Write password to the #password input
