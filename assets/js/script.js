@@ -24,11 +24,21 @@ generateBtn.addEventListener("click", () => {
 
 // Show Prompts to get Password length
 function getPasswordLength() {
-    passwordLength = prompt("Please Enter length of Password"); 
-    if (parseInt(passwordLength) < minCount || parseInt(passwordLength) > maxCount) {
-        alert("Password length should be between " + minCount + " and " + maxCount);
+    var length = prompt("Please Enter length of Password"); 
+    console.log(Number.isInteger(length));
+
+    if (Number.isInteger(parseInt(length))) {
+        if (parseInt(length) < minCount || parseInt(length) > maxCount) {
+            alert("Password length should be between " + minCount + " and " + maxCount);
+            getPasswordLength();
+        } else {
+            passwordLength = length;
+        }
+
+    } else {
+        alert("Please Enter Integer");
         getPasswordLength();
-    } 
+    }
 }
 
 // Show Prompts for including Upper-case, Lower-case, Special characters and Numbers
