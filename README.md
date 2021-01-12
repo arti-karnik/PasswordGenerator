@@ -7,10 +7,7 @@ This is single page web application which generates Password based on user selec
 </div>
 <br>
 <strong> Description: </strong> <br>
-User would be able to set length of password (between 8 & 128) and select password criteria (Upper-case, Lower-case, Numbers and Special). Based on selected criterial and length , new password is generated each time. 
-
-<strong>Testing: </strong> <br>
-Unit tested the page on Windows (Chrome, IE11 & Edge), MAC,Mobile and iPad to ensure that the layout is consistent in full view as well as in the responsive mode.  <br>
+User would be able to set length of password (between 8 & 128) and select password criteria (Upper-case, Lower-case, Numbers and Special). Based on selected criterial and length , new password is generated each time. <br>
 
 <strong> Purpose: </strong> <br>
 
